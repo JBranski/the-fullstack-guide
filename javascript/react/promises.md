@@ -52,3 +52,22 @@ p1.then(() => {
   console.log(err);
 });
 ```
+
+### Chaining Promises
+
+Chain tasks together when you want them to complete is a specific order.
+
+```jsx
+completeTask ( 'First Task' )
+  .then ( result => {
+    console.log ( result );
+    return completeTask ( 'Second Task' );
+  })
+  .then ( result => {
+    console.log ( result );
+    return completeTask ( 'Third Task' );
+  })
+  .then ( result => {
+    console.log ( result );
+  });
+```

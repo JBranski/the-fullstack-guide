@@ -25,3 +25,20 @@ it('testing if the TestComp component loads', () => {
   ReactDOM.unmountComponentAtNode( container );
 })
 ```
+
+## Snapshot Tests
+
+Snapshot tests if everything loads properly within a component
+
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+import renderer from 'react-test-renderer';
+import { shallow }, from 'enzyme';
+import TestComp from './TestComp';
+
+it('testing that the elements load inside the TestComp', () => {
+  const container = renderer.create(<BookForm />.toJSON();
+  expect(container).toMatchSnapshot();
+})
+```

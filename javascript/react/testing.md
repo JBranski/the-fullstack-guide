@@ -42,3 +42,22 @@ it('testing that the elements load inside the TestComp', () => {
   expect(container).toMatchSnapshot();
 })
 ```
+
+## Enzyme Tests
+
+Enzyme tests see if the functionality of an event handler is working properly
+
+```jsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+import renderer from 'react-test-renderer';
+import { shallow }, from 'enzyme';
+import Tabs from './Tabs';
+
+it('closes the first tab and opens any clicked tab', () => {
+  const wrapper = shallow(<Tabs tabs={tabsProp} />)
+  wrapper.find('button').at(1).simulate('click')
+  expect(toJson(wrapper)).toMatchSnapshot()
+})
+```
+

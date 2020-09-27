@@ -35,7 +35,7 @@ _Note: other versions of router exist for  different purposes_
   ```jsx
   <main>
     <HomePage />
-    <Route path="/" component={HomePage} />
+    <Route exact path="/" component={HomePage} />
     <Route path="/about" component={AboutPage} />
   </main>
   ```

@@ -62,3 +62,17 @@ _Note: other versions of router exist for  different purposes_
     <Route component={NotFoundPage} />
   </Switch>
   ```
+  
+  ### Dynamic Routes
+  
+  Use dynamic paths with a route param to match certain paths
+  
+  ```jsx
+  <Route
+    path='/cards/:cardsId'
+    component={(props) => {
+      return <div />
+    }}
+  />
+  ```
+  

@@ -28,7 +28,7 @@ _Note: other versions of router exist for  different purposes_
   
   To add a route, first import Route into the component
   
-  `import { Route } from 'react-router-dom';`
+  `import { Route, Link } from 'react-router-dom';`
   
   Where you want the different components to render, you can add the `Route` components in
   
@@ -38,4 +38,15 @@ _Note: other versions of router exist for  different purposes_
     <Route exact path="/" component={HomePage} />
     <Route path="/about" component={AboutPage} />
   </main>
+  ```
+  
+  ### Linking to a Route
+  
+  ```jsx
+    <Link to="/">
+      Home
+    </Link>
+    <Link to="/about">
+      About
+    </Link>
   ```

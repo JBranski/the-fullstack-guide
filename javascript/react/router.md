@@ -28,7 +28,7 @@ _Note: other versions of router exist for  different purposes_
   
   To add a route, first import Route into the component
   
-  `import { Route, Link } from 'react-router-dom';`
+  `import { Route, Link, Switch } from 'react-router-dom';`
   
   Where you want the different components to render, you can add the `Route` components in
   
@@ -49,4 +49,16 @@ _Note: other versions of router exist for  different purposes_
     <Link to="/about">
       About
     </Link>
+  ```
+  
+  ### 404 pages
+  
+  To create a route that will catch all URLs that do not have a matching route, you will want a route without a path. You will want to encase all routes in a Switch tag so only one renders at a time.
+  
+  ```jsx
+  <Switch>
+    <Route exact path="/" component={HomePage} />
+    <Route path="/about" component={AboutPage} />
+    <Route component={NotFoundPage} />
+  </Switch>
   ```

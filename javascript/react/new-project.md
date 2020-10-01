@@ -5,7 +5,7 @@
 - `npx create-react-app project-name`
 - `cd ./project-name`
 - `npm install`
-- `rm ./src/serviceWorker.js ./src/App.css .src/logo.svg`
+- `rm ./src/serviceWorker.js ./src/App.css ./src/logo.svg`
 - Change the content of `./src/App.js` to the following:
 ```jsx
 import React from 'react';
